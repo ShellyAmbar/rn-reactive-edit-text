@@ -1,8 +1,8 @@
 {
-  "name": "rn-reactive-edit-text",
-  "version": "1.0.1",
+  "name": "rn-reactive-text-input",
+  "version": "1.0.2",
   "description": "A responsive TextView in TypeScript, responding to error with message, disabled mode, and regular mode.",
-  "main": "reactive-edit-text/reactive-edit-text.tsx",
+  "main": "reactive-text-input/reactive-text-input.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

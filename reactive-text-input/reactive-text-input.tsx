@@ -1,10 +1,10 @@
-import {View, Text, TextInput} from 'react-native';
-import React, {forwardRef} from 'react';
-import ReactiveEditTextProps from './interfaces';
+import {View, Text, TextInput} from "react-native";
+import React, {forwardRef} from "react";
+import ReactiveTextInputProps from "./interfaces";
 
-import Styles from './reactive-edit-text.styles';
+import Styles from "./reactive-text-input.styles";
 
-const ReactiveEditText = forwardRef(
+const ReactiveTextInput = forwardRef(
   (
     {
       label,
@@ -18,8 +18,8 @@ const ReactiveEditText = forwardRef(
       inputDisabledStyle,
       placeHolderColor,
       ...props
-    }: ReactiveEditTextProps,
-    ref: any,
+    }: ReactiveTextInputProps,
+    ref: any
   ) => {
     return (
       <View>
@@ -28,7 +28,8 @@ const ReactiveEditText = forwardRef(
             Styles.lable,
             {...lableStyle},
             isDisabled && Styles.lableDisabled,
-          ]}>
+          ]}
+        >
           {label}
         </Text>
 
@@ -55,7 +56,7 @@ const ReactiveEditText = forwardRef(
         )}
       </View>
     );
-  },
+  }
 );
 
-export default ReactiveEditText;
+export default ReactiveTextInput;
