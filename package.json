@@ -1,6 +1,6 @@
 {
   "name": "rn-reactive-edit-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A responsive TextView in TypeScript, responding to error with message, disabled mode, and regular mode.",
   "main": "reactive-edit-text/reactive-edit-text.tsx",
   "scripts": {
@@ -12,6 +12,18 @@
     "edittext",
     "responsive"
   ],
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.3"
+  },
   "author": "Shelly Ambar",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShellyAmbar/rn-reactive-edit-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShellyAmbar/rn-reactive-edit-text/issues"
+  },
+  "homepage": "https://github.com/ShellyAmbar/rn-reactive-edit-text#readme"
 }
