@@ -1,12 +1,12 @@
 import {TextInputProps, TextStyle, ViewStyle} from "react-native";
 
 export default interface ReactiveTextInputProps extends TextInputProps {
-  label: string;
+  label?: string;
   isError?: boolean;
   message?: string;
   isDisabled?: boolean;
   isEditable?: boolean;
-  textInputStyle?: ViewStyle;
+  textInputStyle?: TextStyle;
   lableStyle?: TextStyle;
   errorViewStyle?: TextStyle;
   errorTextStyle?: TextStyle;

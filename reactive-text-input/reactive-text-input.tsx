@@ -23,15 +23,17 @@ const ReactiveTextInput = forwardRef(
   ) => {
     return (
       <View>
-        <Text
-          style={[
-            Styles.lable,
-            {...lableStyle},
-            isDisabled && Styles.lableDisabled,
-          ]}
-        >
-          {label}
-        </Text>
+        {label && (
+          <Text
+            style={[
+              Styles.lable,
+              {...lableStyle},
+              isDisabled && Styles.lableDisabled,
+            ]}
+          >
+            {label}
+          </Text>
+        )}
 
         <TextInput
           ref={ref}

@@ -1,6 +1,6 @@
 {
   "name": "rn-reactive-text-input",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "A responsive TextView in TypeScript, responding to error with message, disabled mode, and regular mode.",
   "main": "reactive-text-input/reactive-text-input.tsx",
   "scripts": {
@@ -10,11 +10,14 @@
     "edit",
     "text",
     "edittext",
-    "responsive"
+    "responsive",
+    "input",
+    "textInput",
+    "inputText"
   ],
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-native": "0.72.3"
+    "react": "18.2.0~",
+    "react-native": "0.72.7~"
   },
   "author": "Shelly Ambar",
   "license": "ISC",
