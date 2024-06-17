@@ -1,8 +1,9 @@
 import {View, Text, TextInput} from "react-native";
-import React, {forwardRef} from "react";
+import React, {forwardRef, useEffect, useState} from "react";
 import ReactiveTextInputProps from "./interfaces";
 
 import Styles from "./reactive-text-input.styles";
+import useDebounce from "./hooks/useDebounce";
 
 const ReactiveTextInput = forwardRef(
   (
@@ -17,10 +18,17 @@ const ReactiveTextInput = forwardRef(
       errorTextStyle,
       inputDisabledStyle,
       placeHolderColor,
+      debounceDelay = 1,
+      onDebounce,
       ...props
     }: ReactiveTextInputProps,
     ref: any
   ) => {
+    const [searchTerm, setSearchTerm] = useState<string>("");
+    const debounce = useDebounce({text: searchTerm, delay: debounceDelay});
+    useEffect(() => {
+      onDebounce && onDebounce(debounce);
+    }, [debounce]);
     return (
       <View>
         {label && (
@@ -36,6 +44,10 @@ const ReactiveTextInput = forwardRef(
         )}
 
         <TextInput
+          value={searchTerm}
+          onChangeText={(v) => {
+            setSearchTerm(v);
+          }}
           ref={ref}
           allowFontScaling={false}
           editable={!isDisabled}

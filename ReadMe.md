@@ -10,17 +10,19 @@
 
 > **Dataset Properties**
 
-| Name               | Type      | Default |
-| ------------------ | --------- | ------- |
-| label              | string    |
-| isError            | boolean   |
-| message            | string    |
-| isDisabled         | boolean   |
-| isEditable         | boolean   |
-| textInputStyle     | ViewStyle |
-| lableStyle         | TextStyle |
-| errorViewStyle     | TextStyle |
-| errorTextStyle     | TextStyle |
-| lableDisabledStyle | TextStyle |
-| inputDisabledStyle | TextStyle |
-| placeHolderColor   | string    |
+| Name               | Type                    | Default |
+| ------------------ | ----------------------- | ------- |
+| label              | string                  |
+| isError            | boolean                 |
+| message            | string                  |
+| isDisabled         | boolean                 |
+| isEditable         | boolean                 |
+| textInputStyle     | ViewStyle               |
+| lableStyle         | TextStyle               |
+| errorViewStyle     | TextStyle               |
+| errorTextStyle     | TextStyle               |
+| lableDisabledStyle | TextStyle               |
+| inputDisabledStyle | TextStyle               |
+| placeHolderColor   | string                  |
+| debounceDelay      | number                  |
+| onDebounce         | (debouncedText) => void |

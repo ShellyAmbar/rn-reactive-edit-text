@@ -13,4 +13,6 @@ export default interface ReactiveTextInputProps extends TextInputProps {
   lableDisabledStyle?: TextStyle;
   inputDisabledStyle?: TextStyle;
   placeHolderColor?: string;
+  debounceDelay?: number;
+  onDebounce?: (debouncedText) => void;
 }
