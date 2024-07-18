@@ -20,6 +20,7 @@ const ReactiveTextInput = forwardRef(
       placeHolderColor,
       debounceDelay = 1,
       onDebounce,
+      containerStyle,
       ...props
     }: ReactiveTextInputProps,
     ref: any
@@ -30,7 +31,7 @@ const ReactiveTextInput = forwardRef(
       onDebounce && onDebounce(debounce);
     }, [debounce]);
     return (
-      <View>
+      <View style={[Styles.container, {...containerStyle}]}>
         {label && (
           <Text
             style={[

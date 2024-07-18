@@ -26,3 +26,4 @@
 | placeHolderColor   | string                  |
 | debounceDelay      | number                  |
 | onDebounce         | (debouncedText) => void |
+| containerStyle     | ViewStyle               |
