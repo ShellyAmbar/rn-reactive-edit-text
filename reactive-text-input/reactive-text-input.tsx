@@ -1,4 +1,4 @@
-import {View, Text, TextInput} from "react-native";
+import {View, Text, TextInput, Keyboard} from "react-native";
 import React, {forwardRef, useEffect, useState} from "react";
 import ReactiveTextInputProps from "./interfaces";
 
@@ -14,7 +14,7 @@ const ReactiveTextInput = forwardRef(
       isDisabled,
       textInputStyle,
       lableStyle,
-      errorViewStyle,
+      errorInputStyle,
       errorTextStyle,
       inputDisabledStyle,
       placeHolderColor,
@@ -25,7 +25,7 @@ const ReactiveTextInput = forwardRef(
     }: ReactiveTextInputProps,
     ref: any
   ) => {
-    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [searchTerm, setSearchTerm] = useState<string>();
     const debounce = useDebounce({text: searchTerm, delay: debounceDelay});
     useEffect(() => {
       onDebounce && onDebounce(debounce);
@@ -45,6 +45,9 @@ const ReactiveTextInput = forwardRef(
         )}
 
         <TextInput
+          onSubmitEditing={() => {
+            Keyboard.dismiss();
+          }}
           value={searchTerm}
           onChangeText={(v) => {
             setSearchTerm(v);
@@ -55,11 +58,9 @@ const ReactiveTextInput = forwardRef(
           style={[
             Styles.textInput,
             {...textInputStyle},
-            isError &&
-              !isDisabled &&
-              (errorViewStyle ? errorViewStyle : Styles.errorView),
-            isDisabled &&
-              (inputDisabledStyle ? inputDisabledStyle : Styles.inputDisabled),
+            isError && !isDisabled && {...Styles.errorView, ...errorInputStyle},
+
+            isDisabled && {...Styles.inputDisabled, ...inputDisabledStyle},
           ]}
           placeholderTextColor={
             placeHolderColor ? placeHolderColor : Styles.placeHolder.color

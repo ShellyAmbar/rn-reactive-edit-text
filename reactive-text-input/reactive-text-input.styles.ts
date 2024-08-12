@@ -4,18 +4,7 @@ export default StyleSheet.create({
   container: {
     width: "100%",
   },
-  textInput: {
-    paddingVertical: 5,
-    backgroundColor: "transparent",
-    borderColor: "#D7D9DE",
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderTopWidth: 0,
-    borderBottomWidth: 1,
-    color: "#000",
-    paddingHorizontal: 0,
-    borderRadius: 0,
-  },
+  textInput: {},
 
   lable: {
     fontSize: 13,
@@ -27,8 +16,8 @@ export default StyleSheet.create({
   errorView: {
     borderColor: "#F72525",
     backgroundColor: "#FFEAEA",
-    stroke: "#F72525",
     color: "#F72525",
+    borderBottomColor: "#F72525",
   },
   errorText: {
     paddingTop: 8,

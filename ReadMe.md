@@ -19,7 +19,7 @@
 | isEditable         | boolean                 |
 | textInputStyle     | ViewStyle               |
 | lableStyle         | TextStyle               |
-| errorViewStyle     | TextStyle               |
+| errorInputStyle    | TextStyle               |
 | errorTextStyle     | TextStyle               |
 | lableDisabledStyle | TextStyle               |
 | inputDisabledStyle | TextStyle               |

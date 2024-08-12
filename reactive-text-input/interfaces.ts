@@ -8,7 +8,7 @@ export default interface ReactiveTextInputProps extends TextInputProps {
   isEditable?: boolean;
   textInputStyle?: TextStyle;
   lableStyle?: TextStyle;
-  errorViewStyle?: TextStyle;
+  errorInputStyle?: TextStyle;
   errorTextStyle?: TextStyle;
   lableDisabledStyle?: TextStyle;
   inputDisabledStyle?: TextStyle;
