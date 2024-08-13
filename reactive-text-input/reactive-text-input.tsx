@@ -21,11 +21,14 @@ const ReactiveTextInput = forwardRef(
       debounceDelay = 1,
       onDebounce,
       containerStyle,
+      defaultValue,
       ...props
     }: ReactiveTextInputProps,
     ref: any
   ) => {
-    const [searchTerm, setSearchTerm] = useState<string>();
+    const [searchTerm, setSearchTerm] = useState<string>(
+      defaultValue ? defaultValue : ""
+    );
     const debounce = useDebounce({text: searchTerm, delay: debounceDelay});
     useEffect(() => {
       onDebounce && onDebounce(debounce);
