@@ -48,6 +48,7 @@ const ReactiveTextInput = forwardRef(
         )}
 
         <TextInput
+          textAlignVertical={"top"}
           onSubmitEditing={() => {
             Keyboard.dismiss();
           }}
