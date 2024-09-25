@@ -22,6 +22,7 @@ const ReactiveTextInput = forwardRef(
       onDebounce,
       containerStyle,
       defaultValue,
+      onChangeText,
       ...props
     }: ReactiveTextInputProps,
     ref: any
@@ -55,7 +56,7 @@ const ReactiveTextInput = forwardRef(
           value={searchTerm}
           onChangeText={(v) => {
             setSearchTerm(v);
-            props.onChangeText && props.onChangeText(v);
+            onChangeText && onChangeText(v);
           }}
           ref={ref}
           allowFontScaling={false}
